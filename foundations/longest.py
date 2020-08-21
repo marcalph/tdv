@@ -18,6 +18,8 @@ s = "abppplee"
 d = {"able", "ale", "apple", "bale", "kangaroo"}
 d = sorted(d, key=len, reverse=True)
 
+
+# first try >> greedy improved
 def find_longest_substr(d=d, s=s):
     for candidate in d:
         if len(candidate) > len(s):
@@ -34,3 +36,6 @@ def find_longest_substr(d=d, s=s):
 
 res = find_longest_substr()
 print(res)
+
+
+#
