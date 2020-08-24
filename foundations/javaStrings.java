@@ -1,6 +1,5 @@
 
-
-public class strings {
+public class javaStrings {
     public static void main(String[] args) {
 
         String message = "Goodbye World!";
