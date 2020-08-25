@@ -1,9 +1,3 @@
-import java.util.HashMap;
-import java.util.List; 
-import java.util.ArrayList;
-import java.util.Map;
-
-
 public class maxSpan{
     public static int method(int[] nums) { 
         int max = 0;
