@@ -40,7 +40,7 @@ class Hangman():
         self.errors = 0
         self.state = '_' * len(self.secret_word)
         self.correct_list = []
-        print("Welcome to angman!")
+        print("Welcome to Hangman!")
         while self.errors < self.max_errors:
             if self.state != self.secret_word:
                 print(f"The word now looks like this : {Fore.GREEN}{self.state}{Style.RESET_ALL}")
