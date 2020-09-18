@@ -1,3 +1,4 @@
+// given string "Code" return a string like "CCoCodCode"
 public class stringSplosion{
     public static String method(String str) {
         String res = "";
