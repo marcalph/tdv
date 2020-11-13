@@ -31,27 +31,30 @@ print()
 
 
 def unroll(string, start=0, times=1):
+    import re
     print(string)
     starts = []
     ends = []
+    nums = []
     for i in range(len(string)):
+        nums = re.findall("\d+", string)
         if string[i] == "[":
             starts.append(i)
         if string[i] == "]":
             ends.append(i)
         if len(starts) == len(ends) > 0:
             break
+    # print(nums)
+    # print(starts)
+    # print(ends)
     if len(starts) == 0:
         print("no brackets left")
         return string
-    try:
-        times = int(string[starts[0]-1])
-    except Exception:
-        times = 1
-    return unroll(string[:starts[0]-1]+times*string[starts[0]+1:ends[-1]] + string[ends[-1]+1:])
+    # raise Exception
+    return unroll(string[:starts[0]-len(nums[0])]+int(nums[0])*string[starts[0]+1:ends[-1]] + string[ends[-1]+1:])
 
 
-unroll("2[3[a]b]3[abc]4[ab]c")
+unroll("20[3[a]b]3[abc]4[ab]c")
 
 
 
