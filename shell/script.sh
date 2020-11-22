@@ -42,7 +42,6 @@ for filename in "$@"; do
     echo "$result"
 done
 # echo "You start with $# positional parameters"
-
 # # Loop until all parameters are used up
 # while [ "$1" != "" ]; do
 #     echo "Parameter 1 equals $1"
@@ -50,5 +49,4 @@ done
 
 #     # Shift all the parameters down by one
 #     shift
-
 # done
