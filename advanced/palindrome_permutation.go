@@ -1,3 +1,7 @@
+/* Given a string s, return all the palindromic permutations (without duplicates) of it. 
+   Return an empty list if no palindromic permutation could be form.
+*/
+
 package main
 
 
@@ -14,18 +18,16 @@ func count(s string) map[rune]int {
 }
 
 
-var perms []string
-func permute(a []rune, s int, e int) []string{
+func permute(a []rune, s int, e int, pnt2perms *[]string) {
 	if s == e {
-		perms = append(perms, string(a))
+		*pnt2perms = append(*pnt2perms, string(a))
 	} else {
 		for i := s; i <= e; i++ {
 			a[s], a[i] = a[i], a[s]
-			permute(a, s+1, e)
+			permute(a, s+1, e, pnt2perms)
 			a[s], a[i] = a[i], a[s]
 		}
 	}
-	return perms
 }
 
 
@@ -38,13 +40,15 @@ func reverse(str string) (result string) {
 
 
 func main(){
-	const s string = "abcabcd"
+	const s string = "aabbc"
 	// m char freq counter for given string s
 	m := count(s)
 	// chars unique chars in given string
 	// cnt check if at most one char has a pair number of occurences
 	var runes []rune // runes w/ pair occurence
 	var pivot rune
+	var perms []string
+	
 	cnt := 0
 	for c, f := range m {
 		if f % 2 != 0 {
@@ -65,12 +69,11 @@ func main(){
 		fmt.Println("impossible")
 	} else {
 		fmt.Println("possible")
-		perms = permute(runes, 0, len(runes)-1)
+		permute(runes, 0, len(runes)-1, &perms)
 		fmt.Println(perms)
 		fmt.Println("results")
 		for _, v := range perms {
 			fmt.Println(v+string(pivot)+reverse(v))
 		}
-
 	}
 }
