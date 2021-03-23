@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function size() {
+function sizing() {
 	result=
     if [ -f "$1" ]; then
         result=`du -sch $1`
@@ -11,5 +11,3 @@ function size() {
     fi
     echo "$result"
 }
-
-size $1
