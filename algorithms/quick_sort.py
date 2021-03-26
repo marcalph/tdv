@@ -1,3 +1,5 @@
+""" simple implementation of quick sort
+"""
 
 def partition(L, start, end):
     pivot = L[start]
@@ -29,6 +31,7 @@ def quick_sort(array, start, end):
     quick_sort(array, p+1, end)
 
 
-arr = [7,5,4,9,1,8,3]
-quick_sort(arr,0,6)
-
+arr = [4,5,3,6]
+print(arr)
+quick_sort(arr,0,3)
+print(arr)
