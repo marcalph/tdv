@@ -9,5 +9,5 @@ class Solution:
                 return viewed[target-v], i
             viewed[v]=i
 
-# other approach w/ l,r pointers
+# other approach w/ l,r pointers w/ sort
 # O(nlog(n)) time | O(1) space
