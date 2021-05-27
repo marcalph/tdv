@@ -1,6 +1,6 @@
 
 # recursive
-# O(log(n)) time | O(log(n))
+# O(h) spacetime
 def findClosestValueInBst(tree, target):
     # Write your code here.
 	return helper(tree, target, tree.value)
@@ -19,11 +19,15 @@ def helper(tree, target, closest):
 
 
 #iterative
-#TODO
-	
-# This is the class of the input tree. Do not edit.
-class BST:
-    def __init__(self, value):
-        self.value = value
-        self.left = None
-        self.right = None
+#O(h), O(1)
+def findClosestValueInBst(tree, target):
+	closest = float("inf")
+	curNode = tree
+	while curNode is not None:
+		if abs(target-curNode.value)<abs(target-closest):
+			closest = curNode.value
+		if target<curNode.value:
+			curNode = curNode.left
+		else:
+			curNode = curNode.right
+	return closest

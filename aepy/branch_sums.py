@@ -5,6 +5,7 @@ def branchSums(root):
 	cursum = 0
 	if root is None:
 		return cursum
+		
 	def helper(node, cursum):
 		if node.left is None and node.right is None: # leaf
 			res.append(cursum+node.value)

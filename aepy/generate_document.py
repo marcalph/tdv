@@ -8,8 +8,9 @@ def generateDocument(characters, document):
 	for c in characters:
 		viewed[c]=viewed.get(c,0)+1
 	for c in document:
-		if c in viewed:
-			viewed[c]-=1
-		else:
+		
+		if c not in viewed or viewed[c]==0:
 			return False
-	return viewed[min(viewed, key=viewed.get)]>=0
+		viewed[c]-=1
+		
+	return True

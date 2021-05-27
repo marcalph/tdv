@@ -1,5 +1,6 @@
 
-#O(n)time, O(1)space
+# O(n)time, O(1)space
+# find the longest peak in array
 def longestPeak(array):
     # Write your code here.
 	peaks = []

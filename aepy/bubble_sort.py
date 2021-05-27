@@ -1,4 +1,5 @@
-#O(n^2)
+#O(n^2), O(1)
+#bubble largest element at the end of array 
 def bubbleSort(array):
     # Write your code here.
     end = len(array)-1

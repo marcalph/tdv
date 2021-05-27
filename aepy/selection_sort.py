@@ -1,5 +1,5 @@
 #O(n^2) time | O(1)space
-
+#select nth minimum and move it in place
 def selectionSort(array):
     # Write your code here.
     for i in range(len(array)):

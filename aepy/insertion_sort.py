@@ -1,4 +1,7 @@
 #O(n^2) time | O(1) space
+# insertion sort
+#sort left part of array
+
 def insertionSort(array):
     # Write your code here.
 	for i in range(1, len(array)):
