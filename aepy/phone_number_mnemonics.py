@@ -1,3 +1,6 @@
+
+
+
 def phoneNumberMnemonics(phoneNumber):
     # Write your code here.
 	cur = [""]*len(phoneNumber)
