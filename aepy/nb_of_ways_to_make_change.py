@@ -1,5 +1,6 @@
 
 #O(nd), O(n)
+# dp don't forget base case
 def numberOfWaysToMakeChange(n, denoms):
     # todo 
 	# order odesn't matter 1+5 approx 5+1

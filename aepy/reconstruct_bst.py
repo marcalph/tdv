@@ -19,7 +19,7 @@ def reconstructBst(preOrderTraversalValues):
 		if value >= current_value:
 			right_subtree_idx = idx
 			break
-			
+	print(right_subtree_idx)
 	left = reconstructBst(preOrderTraversalValues[1:right_subtree_idx])
 	right = reconstructBst(preOrderTraversalValues[right_subtree_idx:])
 	return BST(current_value, left, right)

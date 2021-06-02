@@ -1,5 +1,6 @@
 
 #O(nlogn ) time | O(n) space
+# sort intervals and merge boundaries
 def mergeOverlappingIntervals(intervals):
     # Write your code here.
 	print(intervals)

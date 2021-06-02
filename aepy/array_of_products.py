@@ -1,5 +1,7 @@
 
 #O(n) spacetime
+#compute product of whole array without division
+# compute left products and right product in separate arrays
 def arrayOfProducts(array):
     # Write your code here.
 	n = len(array)

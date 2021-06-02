@@ -1,5 +1,7 @@
 
 #O(n) time, O(1) space
+# find duplicate value in specific range
+# either set or modify values inplace to mark as seen
 def firstDuplicateValue(array):
     # Write your code here.
 	

@@ -1,15 +1,16 @@
+#find stricly monotonic array
+#O(n) time | O(1)space
 def isMonotonic(array):
-    nonDecreasing = True
-    nonIncreasing = True
+    nonDecreasing = 0
+    nonIncreasing = 0
     for i in range(1, len(array)):
         if array[i]<array[i-1]:
-            nonDecreasing=False
+            nonDecreasing+=1
         if array[i]>array[i-1]:
-            nonIncreasing=False
-    return nonDecreasing or nonIncreasing
+            nonIncreasing+=1
+    return nonDecreasing==len(array)-1 or nonIncreasing==len(array)-1
 
 
-#O(n) time | O(1)space
 def isMonotonic(array):
     if len(array)<=2:
         return True

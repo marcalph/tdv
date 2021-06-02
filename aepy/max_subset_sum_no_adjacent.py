@@ -1,4 +1,5 @@
 #O(n)| O(1)
+#look at neighbors
 def maxSubsetSumNoAdjacent(array):
     # Write your code here.
     if not array:

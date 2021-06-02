@@ -1,3 +1,5 @@
+# O(n), O(1)
+# Move all instance of an element to the end by swapping and updating index
 def moveElementToEnd(array, toMove):
     # Write your code here.
 	left = 0

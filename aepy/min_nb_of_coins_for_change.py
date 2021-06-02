@@ -1,4 +1,5 @@
 #O(nd), O(n) 
+# think dp, 
 def minNumberOfCoinsForChange(n, denoms):
     # Write your code here.
     ways = (n+1) * [float("inf")]

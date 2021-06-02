@@ -4,19 +4,24 @@ class Info():
 		self.height = height
 		self.balanced = balanced
 
+#O(n), O(h)
+# need to propagate height and balanced info upwads
 def heightBalancedBinaryTree(tree):
     # Write your code here.
-	def helper(node):
+	from collections import namedtuple
+	tree_info = namedtuple("tree_info", "height, response")
+	
+	def helper_traverse(node):
+		# base case
 		if node is None:
-			return Info(-1, True)
+			return tree_info(0, True)
+		# recursion
+		left_info = helper_traverse(node.left)
+		right_info = helper_traverse(node.right)
 		
-		left = helper(node.left)
-		right = helper(node.right)
-		
-		balanced = left.balanced==True and right.balanced==True and  abs(left.height-right.height)<=1
-		if balanced:
-			return Info(max(left.height, right.height)+1, True)
-		else:
-			return Info(max(left.height, right.height)+1, False)
-		
-    return helper(tree).balanced
+		response = left_info.response and right_info.response and abs(left_info.height-right_info.height)<=1
+
+		height = 1+max(left_info.height, right_info.height)
+		return tree_info(height, response)
+	
+	return helper_traverse(tree).response
