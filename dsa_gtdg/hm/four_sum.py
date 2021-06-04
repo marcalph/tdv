@@ -29,3 +29,5 @@ def foursum(nums, target):
 
 
 print(foursum([1,0-1,0-2,2], 0))
+print(foursum([7,6,4,-1,1,2], 16))
+print(foursum([-10, -3, -5, 2, 15, -7, 28, -6, 12, 8, 11, 5],20))
