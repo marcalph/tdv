@@ -1,4 +1,6 @@
 # O(n) | O(h)
+# dfs
+# inverse left and right trees as we encounter them
 # use info to propagate current state (could be namedtuple also)
 class Info():
 	def __init__(self, diam, height):

@@ -1,5 +1,8 @@
 
-#O(n), O(d)
+
+# O(n), O(d)
+# makes more sense to use bfs 
+# but dfs does same job with less memory
 def invertBinaryTree(tree):
     # Write your code here.
 	if tree is None:
