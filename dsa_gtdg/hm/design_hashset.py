@@ -14,8 +14,8 @@ class MyHashSet:
         """
         Initialize your data structure here.
         """
-        self.size = 1000000
-        self.d = [False for i in range(self.size)]
+        self.size:int = 1000000
+        self.d: list = [False for i in range(self.size)]
 
     def getHash(self, key: int) -> None:
         return hash(key)%self.size

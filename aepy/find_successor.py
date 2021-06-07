@@ -1,4 +1,5 @@
-#O(n) spacetime
+# O(n) spacetime
+# find inorder successor of a node 
 
 def getleftmost(node):
 	"""	return leftmost or None

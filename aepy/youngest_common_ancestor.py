@@ -1,5 +1,9 @@
-#O(h), O(1)
+# O(h), O(1)
+# get lowest common ancestor with only parent edges
+# find resp heights, update deeper node upwards, go up until they meet
 
+
+#
 
 # This is an input class. Do not edit.
 class AncestralTree:

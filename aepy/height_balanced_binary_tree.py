@@ -5,7 +5,7 @@ class Info():
 		self.balanced = balanced
 
 #O(n), O(h)
-# need to propagate height and balanced info upwads
+# need to propagate height and balanced info upwards
 def heightBalancedBinaryTree(tree):
     # Write your code here.
 	from collections import namedtuple

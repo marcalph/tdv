@@ -1,4 +1,6 @@
 # O(wd) spacetime
+# remove islands if not connected to border
+# store island
 def removeIslands(matrix):
     # "your code here."
 	nrows = len(matrix)

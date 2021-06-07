@@ -18,6 +18,7 @@
 
 # O(n), O(1) greedy 
 # because only one good answer ie total distance corresponds to total fuel
+# valid starting point is the one where you land w/ the highest gaz consumption
 def validStartingCity(distances, fuel, mpg):
     # Write your code here.
 	possible_miles = 0

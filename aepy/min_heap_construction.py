@@ -4,7 +4,8 @@ class MinHeap:
         # Do not edit the line below.
         self.heap = self.buildHeap(array)
 
-	#O(n)!!!!!!
+	# O(n)!! because every sift is not equal those from the bottom 
+	# takes O(1)
     def buildHeap(self, array):
         # Write your code here.
 		last_parent = self.get_parent_idx(len(array)-1)

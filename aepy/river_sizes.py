@@ -1,4 +1,5 @@
 #O(rows*cols) spacetime 
+# either bfs or dfs
 def riverSizes(matrix):
     # Write your code here.
     rows = len(matrix)

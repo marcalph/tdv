@@ -6,6 +6,8 @@ class BST:
         self.right = right
 
 #O(n^2) | O(h) call stack+ O(n) for the BST
+# reconstruct bst from preorder
+# root is current val, left is next, right is next greater
 def reconstructBst(preOrderTraversalValues):
     # Write your code here.
 	if len(preOrderTraversalValues)==0:
@@ -32,6 +34,7 @@ def reconstructBst(preOrderTraversalValues):
 
 
 #O(n) time, O(h) callstack + O(n) for the response
+# use uppper and lower bounds of bst node
 class treeinfo:
 	def __init__(self, root_idx):
 		self.root_idx = root_idx

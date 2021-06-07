@@ -1,4 +1,6 @@
+
 # O(nlogn) time | O(n) space
+# build mnt height bst recursively from sorted array using insert
 def minHeightBst(array):
 	
 	def helper(bst, start_idx, end_idx):
@@ -19,6 +21,7 @@ def minHeightBst(array):
 
 
 # O(n) spacetime
+# build the 
 def minHeightBst(array):
 	def helper(start_idx, end_idx):
 		if start_idx>end_idx:
