@@ -1,6 +1,6 @@
 #O(1) spacetime
 # create valid ip adresses
-#generate subparts sequentially and appen d if valid
+# generate subparts sequentially and appen d if valid
 def validIPAddresses(string):
     # Write your code here.
 	res = []

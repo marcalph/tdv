@@ -1,4 +1,6 @@
 # O(n+m), O(1)
+# find value in sorted matrix
+# find the spot that eliminates the most values
 def searchInSortedMatrix(matrix, target):
     # Write your code here.
 	nrows = len(matrix)

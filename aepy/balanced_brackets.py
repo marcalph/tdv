@@ -1,5 +1,6 @@
 #O(n) spacetime
-
+# check validity of various brackets
+# order matters! >> think stack or queue
 def balancedBrackets(string):
     # Write your code here.
 	stack = []

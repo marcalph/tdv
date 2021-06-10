@@ -1,4 +1,4 @@
-# O(n*n!) spacetime w/backtracking
+# O(n*n!) spacetime
 # generate permutation from an array
 def getPermutations(array):
     # Write your code here.    
@@ -14,19 +14,18 @@ def getPermutations(array):
 	helper(0, array, perms)
 	return perms
 
-
-# O(n^2*n!) , O(n*n!)
+# O(n^2*n!), O(n*n!)
 def getPermutations(array):
-	perms =[]
-	helper(array, perm, perms)
+	perms = []
+	if len(array)==0:
+		return []
+	def helper(arr, perm, perms):
+		if len(perm)==len(array):
+			perms.append(perm)
+		else:
+			for i in range(len(arr)):
+				new_arr = arr[:i]+arr[i+1:]
+				new_perm = perm+[arr[i]]
+				helper(new_arr, new_perm, perms)
+	helper(array, [], perms)
 	return perms
-
-def helper(array, perm, perms):
-	if not len(array) and len(perm):
-		perms.append(perm)
-	else:
-		for i in range(array):
-			new_array = array[:i]+array[i+1:]
-			new_perm = perm + [arrya[i]]
-			helper(new_array, new_perm, perms)
-

@@ -1,4 +1,6 @@
-#O(2n), O(1)
+# O(2n), O(1)
+# sort n len array with 3 distinct values
+# counting sort
 def threeNumberSort(array, order):
     # Write your code here.
 	from collections import Counter
@@ -19,6 +21,9 @@ def threeNumberSort(array, order):
 	
 
 #O(2n), O(1)
+# two pass 
+# one left> right to swap low element
+# one right>left to swap high element
 def threeNumberSort(array, order):
 	start_unsorted, end_unsorted = 0, len(array)-1
 	for moving in range(len(array)):
@@ -34,6 +39,8 @@ def threeNumberSort(array, order):
 
 
 #O(n), O(1) smart
+#multiple pointers
+# start/end of unsorted + moving
 def threeNumberSort(array, order):
 	start_unsorted, moving_index, end_unsorted = 0, 0, len(array)-1
 	

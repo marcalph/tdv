@@ -31,7 +31,7 @@ def quick_sort(array, start, end):
     quick_sort(array, p+1, end)
 
 
-arr = [4,5,3,6]
+arr = [2,3,1]
 print(arr)
-quick_sort(arr,0,3)
+quick_sort(arr,0,len(arr)-1)
 print(arr)

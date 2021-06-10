@@ -1,6 +1,6 @@
-# O(n^4), O(n), can make in O(1) space by using only indices
+# O(n^3), O(n), can make in O(1) space by using only indices
 # find palindrome in substrings
-
+#brute force
 def longestPalindromicSubstring(string):
     # Write your code here.
 	current_best = ""
@@ -24,6 +24,7 @@ def is_palindrome(string):
 
 
 # O(n^2), 0(1)
+# check starting from current char
 def longestPalindromicSubstring(string):
 	current_best = [0, 1]
 	for i in range(1, len(string)):

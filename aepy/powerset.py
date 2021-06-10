@@ -1,6 +1,8 @@
 
 # O(n 2^n) spacetime
 # iterative
+# start with empty than append evry elt of array
+# []>>[],[1]>> [],[2],[1][1,2]>>...
 def powerset(array):
     # Write your code here.
 	res = []

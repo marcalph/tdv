@@ -1,5 +1,6 @@
-#recursive  w/ memoization
-#O(k*n) , O(n) n stairs, k maxstep
+# recursive  w/ memoization
+# O(k*n) , O(n) n stairs, k maxstep
+# best is iterative (dp) + sliding window!!!!
 def staircaseTraversal(height, maxSteps):
     # Write your code here.
     moves = list(range(1, maxSteps+1))
@@ -22,4 +23,3 @@ def staircaseTraversal(height, maxSteps):
 	print(mem)
 	return nways
 
-# best is iterative (dp) + sliding window
