@@ -1,5 +1,5 @@
 
-# O(n 2^n) spacetime
+# O(n2^n) spacetime
 # iterative
 # start with empty than append evry elt of array
 # []>>[],[1]>> [],[2],[1][1,2]>>...
@@ -28,4 +28,24 @@ def powerset(array):
 	
 	res = helper(res, array)
 	return res
-		
+
+# other 
+def powerset(array):
+    # Write your code here.
+	res=[]
+	res = helper(array, res)
+	print(res)
+	return res
+
+def helper(array, res, group=[], idx = 0):
+	#base case
+	if idx == len(array):
+		res.append(group)
+	else:
+		# do nothing
+		helper(array, res, group, idx+1)
+		# add
+		newgroup = group[:]
+		newgroup.append(array[idx])
+		helper(array, res, newgroup, idx+1)
+	return res
