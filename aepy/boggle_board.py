@@ -39,8 +39,6 @@ def traverse(i,j, board, viewed, trienode, result):
 	
 	
 	
-	
-
 def get_neighbors(x,y,viewed, board):
 	moves = [(-1,-1),
 			 (-1, 0),
